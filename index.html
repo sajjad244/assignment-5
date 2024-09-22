@@ -3,9 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ASSIGNMENT-5.0</title>
+    <!-- tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google-font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              Lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+    <!--  -->
   </head>
-  <body>
+  <body class="font-Lexend">
+    <header class="container mx-auto md:sticky md:top-0 md:backdrop-blur-sm">
+      <nav class="flex justify-around bg-purple-50 p-5">
+        <div>
+          <!-- !! Button -->
+          <button class="btn bg-green-400">Blog</button>
+        </div>
+        <div class="flex justify-between">
+          <img class="w-9" src="./assets/logo.png" alt="" />
+          <h1 class="flex justify-center items-center ml-5 text-3xl font-black">
+            Donate Bangladesh
+          </h1>
+        </div>
+        <div class="flex justify-between">
+          <img src="./assets/coin.png" alt="" />
+          <p class="flex justify-center items-center ml-5 space-x-2">
+            <!-- !! -->
+            <span>5500</span> <span>BDT</span>
+          </p>
+        </div>
+      </nav>
+
+      <!--!! Donation & history button -->
+      <div class="mt-10 text-center space-x-10 p-8">
+        <button id="donation-btn" class="btn">Donation</button>
+        <button id="history-btn" class="btn">History</button>
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-5 bg-white">
+      <!-- ? card -->
+      <div id="card-section" class="hidden">
+        <!-- card 1 -->
+        <div class="md:flex justify-center border border-stone-200 rounded-md">
+          <div class="md:w-2/5 p-10">
+            <figure>
+              <img src="./assets/noakhali.png" alt="" />
+            </figure>
+          </div>
+          <!-- card body -->
+          <div class="md:flex justify-center flex-col md:w-3/5 p-10">
+            <!-- coin -->
+            <div
+              class="flex justify-center w-[120px] h-auto bg-slate-200 rounded-lg"
+            >
+              <div>
+                <img src="./assets/coin.png" alt="" />
+              </div>
+              <p class="flex items-center ml-2 space-x-2">
+                <!-- !! -->
+                <span>0</span> <span>BDT</span>
+              </p>
+            </div>
+            <br />
+            <!-- coin -->
+            <h1 class="text-xl font-black">
+              Donate for Flood at Noakhali, Bangladesh
+            </h1>
+            <br />
+            <p>
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <br />
+            <!-- !!  -input-  -->
+            <input
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered input-md w-full"
+            />
+            <br />
+            <!-- !! button -->
+            <button
+              class="btn hover:text-white hover:bg-green-400 transition duration-[500ms] w-full"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+        <!-- card 1 -->
+
+        <!-- card 2 -->
+        <div
+          class="md:flex justify-center border border-stone-200 rounded-md mt-5"
+        >
+          <div class="md:w-2/5 p-10">
+            <figure>
+              <img src="./assets/feni.png" alt="" />
+            </figure>
+          </div>
+          <!-- card body -->
+          <div class="md:flex justify-center flex-col md:w-3/5 p-10">
+            <!-- coin -->
+            <div
+              class="flex justify-center w-[120px] h-auto bg-slate-200 rounded-lg"
+            >
+              <div>
+                <img src="./assets/coin.png" alt="" />
+              </div>
+              <p class="flex items-center ml-2 space-x-2">
+                <!-- !! -->
+                <span>0</span> <span>BDT</span>
+              </p>
+            </div>
+            <br />
+            <!-- coin -->
+            <h1 class="text-xl font-black">
+              Donate for Flood Relief in Feni,Bangladesh
+            </h1>
+            <br />
+            <p>
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <br />
+            <!-- !!  -input-  -->
+            <input
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered input-md w-full"
+            />
+            <br />
+            <!-- !! button -->
+            <button
+              class="btn hover:text-white hover:bg-green-400 transition duration-[500ms] w-full"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+        <!-- card 2-->
+
+        <!-- card 3 -->
+        <div
+          class="md:flex justify-center border border-stone-200 rounded-md mt-5"
+        >
+          <div class="md:w-2/5 p-10">
+            <figure>
+              <img src="./assets/quota-protest.png" alt="" />
+            </figure>
+          </div>
+          <!-- card body -->
+          <div class="md:flex justify-center flex-col md:w-3/5 p-10">
+            <!-- coin -->
+            <div
+              class="flex justify-center w-[120px] h-auto bg-slate-200 rounded-lg"
+            >
+              <div>
+                <img src="./assets/coin.png" alt="" />
+              </div>
+              <p class="flex items-center ml-2 space-x-2">
+                <!-- !! -->
+                <span>0</span> <span>BDT</span>
+              </p>
+            </div>
+            <br />
+            <!-- coin -->
+            <h1 class="text-xl font-black">
+              Aid for Injured in the Quota Movement
+            </h1>
+            <br />
+            <p>
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <br />
+            <!-- !!  -input-  -->
+            <input
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered input-md w-full"
+            />
+            <br />
+            <!-- !! button -->
+            <button
+              class="btn hover:text-white hover:bg-green-400 transition duration-[500ms] w-full"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+        <!-- card 3-->
+      </div>
+      <!-- ? card -->
+    </main>
     <!-- js file -->
     <script src="./js/index.js"></script>
   </body>
