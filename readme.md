@@ -28,7 +28,7 @@
 - Input field for donation amount.
 - Button for submitting the donation.
 
-- **History Section**: Initially hidden and empty.
+<!-- - **History Section**: Initially hidden and empty. -->
 
 ## Functionalities
 
@@ -36,6 +36,7 @@
 
 - Clicking the "History" button will hide the donation data and display the history.
 - Clicking the "Donation" button will hide the history and display the donation data.
+
 - **Donation Functionality for Each Card**:
   - When the "Donate Now" button is clicked:
     - The donation input will be deducted from the total account balance, and the updated balance will be shown.
