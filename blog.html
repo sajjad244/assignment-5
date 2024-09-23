@@ -20,7 +20,7 @@
     />
   </head>
   <body>
-    <header>
+    <header class="container mx-auto md:sticky md:top-0 md:backdrop-blur-sm">
       <nav class="flex justify-around bg-purple-50 p-5">
         <div>
           <!-- !! Button -->
@@ -34,41 +34,75 @@
         </div>
         <div class="flex justify-between">
           <img src="./assets/coin.png" alt="" />
-          <p class="flex justify-center items-center ml-5 space-x-2">
+          <p class="flex justify-center items-center ml-5 space-x-2 font-black">
             <!-- !! -->
-            <span>5500</span> <span>BDT</span>
+            <span id="main-amount">5500</span> <span>BDT</span>
           </p>
         </div>
       </nav>
+
+      <!--!! Donation & history button -->
+      <div class="mt-10 text-center space-x-10 p-8">
+        <button id="donation-btn" class="btn bg-green-500 text-white">
+          Donation
+        </button>
+        <button id="history-btn" class="btn">History</button>
+      </div>
     </header>
-    <main class="container mx-auto mt-20">
+    <main class="container mx-auto mt-10">
+      <h1 class="text-7xl font-black mb-10 p-3">FaQ !!</h1>
       <!--  -->
 
-      <div class="collapse collapse-arrow bg-base-200">
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" checked="checked" />
         <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          1. What is the Document Object Model (DOM)?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            The DOM represents documents as a tree for dynamic manipulation.
+          </p>
         </div>
       </div>
+
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          2. How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            You can select an element using methods like `getElementById()`,
+            `querySelector()`, or `getElementsByClassName()`.
+          </p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          3. What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Handle events at a parent level; improves performance and
+            efficiency.
+          </p>
+        </div>
+      </div>
+
       <div class="collapse collapse-arrow bg-base-200">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          4. How do you manipulate an element's attributes and styles using the
+          DOM?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
-        </div>
-      </div>
-      <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
-        </div>
-        <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            Use element.setAttribute() and element.style.property for
+            manipulation.
+          </p>
         </div>
       </div>
 
