@@ -1,17 +1,14 @@
-// !! Global
-const cardSectionEl = document.getElementById("card-section");
-const donationButtonEl = document.getElementById("donation-btn");
-const historyButtonEl = document.getElementById("history-btn");
-
 // !!! blog button for new window
 document.getElementById("blogButton").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
-// !!! Home button for new window
-document.getElementById("homeButton").addEventListener("click", function () {
-  //   window.location.href = "./index.html";
-  console.log("ekjfbrkj");
-});
+
+// !! Global
+const cardSectionEl = document.getElementById("card-section");
+const donationButtonEl = document.getElementById("donation-btn");
+const historyButtonEl = document.getElementById("history-btn");
+const mainAmount = document.getElementById("main-amount").innerText;
+const mainAmountEl = parseFloat(mainAmount);
 
 // !! donation 1st btn
 donationButtonEl.addEventListener("click", function () {
@@ -25,4 +22,23 @@ historyButtonEl.addEventListener("click", function () {
   historyButtonEl.classList.add("bg-green-500", "text-white");
   donationButtonEl.classList.remove("bg-green-500", "text-white");
   cardSectionEl.classList.add("hidden");
+});
+
+// !!!  card-1
+
+document.getElementById("card1").addEventListener("click", function () {
+  const cardOne = document.getElementById("1st-card").innerText;
+  const cardOneEl = parseFloat(cardOne);
+  const inputOne = document.getElementById("1st-card-input").value;
+  const inputOneEl = parseFloat(inputOne);
+  const updateCardBalance1 = cardOneEl + inputOneEl;
+  const updateMainBalance = mainAmountEl - updateCardBalance1;
+
+  if (!isNaN(inputOneEl) && inputOneEl > 0) {
+    document.getElementById("1st-card").innerText = updateCardBalance1;
+    document.getElementById("main-amount").innerText = updateMainBalance;
+    document.getElementById("1st-card-input").value = "";
+  } else {
+    alert("Write a Positive number please :) ");
+  }
 });

@@ -52,7 +52,7 @@
           <img src="./assets/coin.png" alt="" />
           <p class="flex justify-center items-center ml-5 space-x-2">
             <!-- !! -->
-            <span>5500</span> <span>BDT</span>
+            <span id="main-amount">5500</span> <span>BDT</span>
           </p>
         </div>
       </nav>
@@ -85,7 +85,7 @@
               </div>
               <p class="flex items-center ml-2 space-x-2">
                 <!-- !! -->
-                <span>0</span> <span>BDT</span>
+                <span id="1st-card">0</span> <span>BDT</span>
               </p>
             </div>
             <br />
@@ -105,6 +105,7 @@
             <br />
             <!-- !!  -input-  -->
             <input
+              id="1st-card-input"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered input-md w-full"
@@ -112,6 +113,7 @@
             <br />
             <!-- !! button -->
             <button
+              id="card1"
               class="btn hover:text-white hover:bg-green-400 transition duration-[500ms] w-full"
             >
               Donate Now
