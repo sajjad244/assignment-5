@@ -66,7 +66,7 @@
       </div>
     </header>
 
-    <main class="container mx-auto mt-5 bg-white">
+    <main class="container mx-auto mt-5 bg-white relative">
       <!-- ? card -->
       <div id="card-section" class="">
         <!-- card 1 -->
@@ -235,6 +235,25 @@
         <!-- card 3-->
       </div>
       <!-- ? card -->
+
+      <!-- ? modal start -->
+      <div
+        id="modalHidden"
+        class="bg-purple-300 w-2/5 mx-auto border rounded-xl space-y-5 absolute top-28 right-72 hidden"
+      >
+        <br />
+        <h1 class="text-center font-black text-3xl">Congrates!</h1>
+
+        <p class="text-center font-black">You have Donated For Humankind</p>
+
+        <p class="text-center font-extrabold text-2xl">Successfully</p>
+        <div class="text-center">
+          <button id="modal-btn" class="btn">Close Confirmation</button>
+        </div>
+        <br />
+      </div>
+
+      <!-- ? modal end -->
     </main>
     <!--!! js file -->
     <script src="./js/index.js"></script>

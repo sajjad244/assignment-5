@@ -7,6 +7,7 @@ document.getElementById("blogButton").addEventListener("click", function () {
 const cardSectionEl = document.getElementById("card-section");
 const donationButtonEl = document.getElementById("donation-btn");
 const historyButtonEl = document.getElementById("history-btn");
+const hidModalEl = document.getElementById("modalHidden");
 const mainAmount = document.getElementById("main-amount").innerText;
 const mainAmountEl = parseFloat(mainAmount);
 
@@ -24,6 +25,11 @@ historyButtonEl.addEventListener("click", function () {
   cardSectionEl.classList.add("hidden");
 });
 
+// !! modal close btn
+document.getElementById("modal-btn").addEventListener("click", function () {
+  hidModalEl.classList.add("hidden");
+});
+
 // !!!  card-1
 
 document.getElementById("card1").addEventListener("click", function () {
@@ -38,6 +44,7 @@ document.getElementById("card1").addEventListener("click", function () {
     document.getElementById("1st-card").innerText = updateCardBalance1;
     document.getElementById("main-amount").innerText = updateMainBalance;
     document.getElementById("1st-card-input").value = "";
+    hidModalEl.classList.remove("hidden");
   } else {
     alert("Write a Positive number please :) ");
   }
