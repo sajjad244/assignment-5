@@ -13,3 +13,10 @@ function getTextFieldValueById(id) {
   const textValueNumber = parseFloat(textValue);
   return textValueNumber;
 }
+
+//? function for get textField innerText
+
+function getInnerTextId(id) {
+  const textInner = document.getElementById(id).innerText;
+  return textInner;
+}

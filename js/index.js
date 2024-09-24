@@ -48,13 +48,15 @@ document.getElementById("btn-donate-1").addEventListener("click", function () {
     //???-Add-to-Transaction-History-??// Dynamic
 
     const entryP = document.createElement("p");
-
-    entryP.innerText = `added : ${addBalance} Tk. Balance: ${newMainAmount} Tk.`;
-
-    // ??? should be a common function
-
+    const date = new Date();
+    entryP.innerHTML = `
+      <h1 class="text-center  text-3xl font-black">Transaction</h1>
+      <br/>
+      <p class="text-lg">${addBalance} Tk. ${getInnerTextId("text1")}</p>
+      <p class="text-sm">${date}</p>
+      <br/>
+    `;
     document.getElementById("transaction-container").appendChild(entryP);
-
     // ???
   } else {
     alert("Write a Positive number please :) ");
@@ -72,6 +74,19 @@ document.getElementById("btn-donate-2").addEventListener("click", function () {
     document.getElementById("text-value-2").innerText = addBalance;
     document.getElementById("donate-input-2").value = "";
     document.getElementById("main-amount").innerText = newMainAmount;
+    //???-Add-to-Transaction-History-??// Dynamic
+
+    const entryP = document.createElement("p");
+    const date = new Date();
+    entryP.innerHTML = `
+          <h1 class="text-center text-3xl font-black">Transaction</h1>
+          <br/>
+          <p class="text-lg">${addBalance} Tk. ${getInnerTextId("text2")}</p>
+          <p class="text-sm">${date}</p>
+          <br/>
+        `;
+    document.getElementById("transaction-container").appendChild(entryP);
+    // ???
     hidModalEl.classList.remove("hidden");
   } else {
     alert("Write a Positive number please :) ");
@@ -90,6 +105,19 @@ document.getElementById("btn-donate-3").addEventListener("click", function () {
     document.getElementById("donate-input-3").value = "";
     document.getElementById("main-amount").innerText = newMainAmount;
     hidModalEl.classList.remove("hidden");
+    //???-Add-to-Transaction-History-??// Dynamic
+
+    const entryP = document.createElement("p");
+    const date = new Date();
+    entryP.innerHTML = `
+          <h1 class="text-center text-3xl font-black">Transaction</h1>
+          <br/>
+          <p class="text-lg">${addBalance} Tk. ${getInnerTextId("text3")}</p>
+          <p class="text-sm">${date}</p>
+          <br/>
+        `;
+    document.getElementById("transaction-container").appendChild(entryP);
+    // ???
   } else {
     alert("Write a Positive number please :) ");
   }
