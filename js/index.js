@@ -16,6 +16,7 @@ donationButtonEl.addEventListener("click", function () {
   donationButtonEl.classList.add("bg-green-500", "text-white");
   historyButtonEl.classList.remove("bg-green-500", "text-white");
   cardSectionEl.classList.remove("hidden");
+  document.getElementById("transaction-section").classList.add("hidden");
 });
 
 // !! history 2nd btn
@@ -23,9 +24,10 @@ historyButtonEl.addEventListener("click", function () {
   historyButtonEl.classList.add("bg-green-500", "text-white");
   donationButtonEl.classList.remove("bg-green-500", "text-white");
   cardSectionEl.classList.add("hidden");
+  document.getElementById("transaction-section").classList.remove("hidden");
 });
 
-// !! modal close btn
+// !! Modal close btn
 document.getElementById("modal-btn").addEventListener("click", function () {
   hidModalEl.classList.add("hidden");
 });
@@ -42,6 +44,18 @@ document.getElementById("btn-donate-1").addEventListener("click", function () {
     document.getElementById("donate-input-1").value = "";
     document.getElementById("main-amount").innerText = newMainAmount;
     hidModalEl.classList.remove("hidden");
+
+    //???-Add-to-Transaction-History-??// Dynamic
+
+    const entryP = document.createElement("p");
+
+    entryP.innerText = `added : ${addBalance} Tk. Balance: ${newMainAmount} Tk.`;
+
+    // ??? should be a common function
+
+    document.getElementById("transaction-container").appendChild(entryP);
+
+    // ???
   } else {
     alert("Write a Positive number please :) ");
   }

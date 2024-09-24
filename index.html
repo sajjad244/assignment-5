@@ -64,7 +64,7 @@
       </nav>
 
       <!--!! Donation & history button -->
-      <div class="mt-10 text-center space-x-10 p-8">
+      <div class="mt-1 text-center space-x-10 p-5">
         <button id="donation-btn" class="btn bg-green-500 text-white">
           Donation
         </button>
@@ -249,7 +249,7 @@
       <!-- ? modal start -->
       <div
         id="modalHidden"
-        class="bg-purple-300 w-2/5 mx-auto border rounded-xl space-y-5 fixed top-1/4 right-1/4 z-30 hidden"
+        class="bg-purple-200 w-2/5 mx-auto border rounded-xl space-y-5 fixed top-1/4 right-1/4 z-30 hidden"
       >
         <br />
         <h1 class="text-center font-black text-3xl">Congrates!</h1>
@@ -262,8 +262,22 @@
         </div>
         <br />
       </div>
-
       <!-- ? modal end -->
+
+      <!-- ? transaction section start -->
+      <div id="transaction-section" class="hidden">
+        <div class="flex justify-center">
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title">Transaction History</h2>
+              <div id="transaction-container">
+                <!-- dynamic element will added -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ? transaction section start -->
     </main>
     <!--!! js file -->
     <script src="./js/utilities.js"></script>
