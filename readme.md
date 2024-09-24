@@ -74,4 +74,22 @@
 <!-- - **Static Modal**: Display a static modal instead of an alert on a successful donation. -->
 
 - **Reusable Functions**: Use at least 2 common functions.
-- **Responsive Design**: Ensure the application is responsive for different screen sizes.
+<!-- - **Responsive Design**: Ensure the application is responsive for different screen sizes. -->
+
+<!-- // document.getElementById("card1").addEventListener("click", function () {
+//   const cardOne = document.getElementById("1st-card").innerText;
+//   const cardOneEl = parseFloat(cardOne);
+//   const inputOne = document.getElementById("1st-card-input").value;
+//   const inputOneEl = parseFloat(inputOne);
+//   const updateCardBalance1 = cardOneEl + inputOneEl;
+//   const updateMainBalance = mainAmountEl - updateCardBalance1;
+
+//   if (!isNaN(inputOneEl) && inputOneEl > 0) {
+//     document.getElementById("1st-card").innerText = updateCardBalance1;
+//     document.getElementById("main-amount").innerText = updateMainBalance;
+//     document.getElementById("1st-card-input").value = "";
+//     hidModalEl.classList.remove("hidden");
+//   } else {
+//     alert("Write a Positive number please :) ");
+//   }
+// }); -->

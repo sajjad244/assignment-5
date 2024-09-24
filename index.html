@@ -44,7 +44,7 @@
           <!-- !! Button -->
           <button id="blogButton" class="btn bg-green-400">Blog</button>
         </div>
-        <div class="flex justify-between">
+        <div class="md:flex md:justify-between hidden md:block">
           <img class="w-9" src="./assets/logo.png" alt="" />
           <h1 class="flex justify-center items-center ml-5 text-3xl font-black">
             Donate Bangladesh
@@ -89,7 +89,7 @@
               </div>
               <p class="flex items-center ml-2 space-x-2">
                 <!-- !! -->
-                <span id="1st-card">0</span> <span>BDT</span>
+                <span id="text-value-1">0</span> <span>BDT</span>
               </p>
             </div>
             <br />
@@ -109,7 +109,7 @@
             <br />
             <!-- !!  -input-  -->
             <input
-              id="1st-card-input"
+              id="donate-input-1"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered input-md w-full"
@@ -117,7 +117,7 @@
             <br />
             <!-- !! button -->
             <button
-              id="card1"
+              id="btn-donate-1"
               class="btn hover:text-white hover:bg-green-400 transition duration-[500ms] w-full"
             >
               Donate Now
@@ -146,7 +146,7 @@
               </div>
               <p class="flex items-center ml-2 space-x-2">
                 <!-- !! -->
-                <span>0</span> <span>BDT</span>
+                <span id="text-value-2">0</span> <span>BDT</span>
               </p>
             </div>
             <br />
@@ -166,6 +166,7 @@
             <br />
             <!-- !!  -input-  -->
             <input
+              id="donate-input-2"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered input-md w-full"
@@ -173,6 +174,7 @@
             <br />
             <!-- !! button -->
             <button
+              id="btn-donate-2"
               class="btn hover:text-white hover:bg-green-400 transition duration-[500ms] w-full"
             >
               Donate Now
@@ -201,7 +203,7 @@
               </div>
               <p class="flex items-center ml-2 space-x-2">
                 <!-- !! -->
-                <span>0</span> <span>BDT</span>
+                <span id="text-value-3">0</span> <span>BDT</span>
               </p>
             </div>
             <br />
@@ -221,6 +223,7 @@
             <br />
             <!-- !!  -input-  -->
             <input
+              id="donate-input-3"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered input-md w-full"
@@ -228,6 +231,7 @@
             <br />
             <!-- !! button -->
             <button
+              id="btn-donate-3"
               class="btn hover:text-white hover:bg-green-400 transition duration-[500ms] w-full"
             >
               Donate Now
@@ -241,7 +245,7 @@
       <!-- ? modal start -->
       <div
         id="modalHidden"
-        class="bg-purple-300 w-2/5 mx-auto border rounded-xl space-y-5 absolute top-28 right-72 hidden"
+        class="bg-purple-300 w-2/5 mx-auto border rounded-xl space-y-5 fixed top-1/4 right-1/4 z-30 hidden"
       >
         <br />
         <h1 class="text-center font-black text-3xl">Congrates!</h1>
@@ -258,6 +262,7 @@
       <!-- ? modal end -->
     </main>
     <!--!! js file -->
+    <script src="./js/utilities.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

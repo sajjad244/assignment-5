@@ -30,20 +30,51 @@ document.getElementById("modal-btn").addEventListener("click", function () {
   hidModalEl.classList.add("hidden");
 });
 
-// !!!  card-1
+// !! card btn 1
 
-document.getElementById("card1").addEventListener("click", function () {
-  const cardOne = document.getElementById("1st-card").innerText;
-  const cardOneEl = parseFloat(cardOne);
-  const inputOne = document.getElementById("1st-card-input").value;
-  const inputOneEl = parseFloat(inputOne);
-  const updateCardBalance1 = cardOneEl + inputOneEl;
-  const updateMainBalance = mainAmountEl - updateCardBalance1;
+document.getElementById("btn-donate-1").addEventListener("click", function () {
+  const inputValueNumber = getInputFieldValueById("donate-input-1");
+  const textValueNumber = getTextFieldValueById("text-value-1");
+  if (!isNaN(inputValueNumber) && inputValueNumber > 0) {
+    const addBalance = inputValueNumber + textValueNumber;
+    const newMainAmount = mainAmountEl - addBalance;
+    document.getElementById("text-value-1").innerText = addBalance;
+    document.getElementById("donate-input-1").value = "";
+    document.getElementById("main-amount").innerText = newMainAmount;
+    hidModalEl.classList.remove("hidden");
+  } else {
+    alert("Write a Positive number please :) ");
+  }
+});
 
-  if (!isNaN(inputOneEl) && inputOneEl > 0) {
-    document.getElementById("1st-card").innerText = updateCardBalance1;
-    document.getElementById("main-amount").innerText = updateMainBalance;
-    document.getElementById("1st-card-input").value = "";
+// !! card btn 2
+
+document.getElementById("btn-donate-2").addEventListener("click", function () {
+  const inputValueNumber = getInputFieldValueById("donate-input-2");
+  const textValueNumber = getTextFieldValueById("text-value-2");
+  if (!isNaN(inputValueNumber) && inputValueNumber > 0) {
+    const addBalance = inputValueNumber + textValueNumber;
+    const newMainAmount = mainAmountEl - addBalance;
+    document.getElementById("text-value-2").innerText = addBalance;
+    document.getElementById("donate-input-2").value = "";
+    document.getElementById("main-amount").innerText = newMainAmount;
+    hidModalEl.classList.remove("hidden");
+  } else {
+    alert("Write a Positive number please :) ");
+  }
+});
+
+// !! card btn 3
+
+document.getElementById("btn-donate-3").addEventListener("click", function () {
+  const inputValueNumber = getInputFieldValueById("donate-input-3");
+  const textValueNumber = getTextFieldValueById("text-value-3");
+  if (!isNaN(inputValueNumber) && inputValueNumber > 0) {
+    const addBalance = inputValueNumber + textValueNumber;
+    const newMainAmount = mainAmountEl - addBalance;
+    document.getElementById("text-value-3").innerText = addBalance;
+    document.getElementById("donate-input-3").value = "";
+    document.getElementById("main-amount").innerText = newMainAmount;
     hidModalEl.classList.remove("hidden");
   } else {
     alert("Write a Positive number please :) ");
